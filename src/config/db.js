@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://127.0.0.1/db_employees');
+mongoose.connect('mongodb://127.0.0.1:17017/db_employees');
 
 const Schema = mongoose.Schema;
 
