@@ -1,6 +1,6 @@
 const PersonRepository = require('../repository/PersonRepository');
 const redis = require('redis');
-const client = redis.createClient();
+const client = redis.createClient('6379','redis');
 
 exports.get = (req, res, next) => {
 
@@ -21,6 +21,7 @@ exports.get = (req, res, next) => {
 };
 exports.getById = (req, res, next) => {
 
+    
     PersonRepository.getById(req.params.id)
         .then(person => {
             res.status(200).send(person);

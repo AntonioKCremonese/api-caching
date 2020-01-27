@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://127.0.0.1:17017/db_employees');
+mongoose.connect('mongodb://mongo:27017/db_employees',{useNewUrlParser:true,useUnifiedTopology:true});
 
 const Schema = mongoose.Schema;
 
